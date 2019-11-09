@@ -1,0 +1,89 @@
+.dashboard {
+
+    background-color: white;
+
+    .cubes {
+
+        display: grid;
+        grid-template-columns: 40% 40% 20%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "top top top"
+        "left middle right"
+        "bottom bottom bottom";
+
+
+         .dashboard-header {
+            width: 100%;
+            height: 50px;
+            grid-area: top;
+            display: grid;
+            grid-template-columns: 10% 55% 14% 21%;
+            grid-template-rows: auto;
+            grid-template-areas:"left . middle right";
+            background-color: #f3f3f3;
+
+            .title {
+                grid-area: left;
+                margin-top: 13%;
+            }
+
+            .progress-bar {
+                grid-area: middle;
+
+                .gray-line {
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 5px;
+                    background-color: #c7cdd9;
+                    margin-top: 13%;
+                    position: absolute;
+                }
+
+                .blue-line {
+                    width: 80%;
+                    height: 4px;
+                    border-radius: 5px;
+                    margin-top: 13%;
+                    background-color: #0077ff;
+                    position: absolute;
+                }
+            }
+    
+            .insertions-needed {
+                height: 9px;
+                font-size: 12.5px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #aab2c0;
+                grid-area: right;
+                margin-top: 6%;
+
+            }
+        }
+
+        .cube {
+            display:inline-block;    
+            border: solid 0.5px #ebedf8;
+        }
+
+        .general-results{
+            grid-area: left;
+        }
+
+        .rating {
+            grid-area: middle;
+        }
+
+        .terms {
+            grid-area: right;
+        }
+
+        .support-request  {
+            grid-area: bottom;
+        }
+    }   
+}

@@ -1,0 +1,36 @@
+<div class="support-request">
+  <div class="title">
+    <h1 style="text-align: left;">Support requests</h1>
+  </div>
+  <div class="button"> <span class='add-button' (click)="addRequest()">ADD</span></div>
+  <div class="table">
+    <table>
+      <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>TIME</th>
+        <th>PHONE NUMBER</th>
+        <th>CITY</th>
+        <th>STATUS</th>
+      </tr>
+      <tbody>
+        <tr *ngFor='let request of supportRequests'>
+          <td class="td-name">{{request.name}}</td>
+          <td class="td-other">{{request.email}}</td>
+          <td class="td-other">{{request.timestamp | date: 'hh:mm a'}}</td>
+          <td class="td-other">{{request.phoneNumber}}</td>
+          <td class="td-other">{{request.city}}</td>
+          <td *ngIf="request.status==='unsent'" class="td-other" (click)="changeToSent(request.index)">
+            <div class="unsent"><span>send</span></div>
+          </td>
+          <td *ngIf="request.status==='sent'" class="td-other">
+            <div class="sent"><span>sent</span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sub-text">
+      Showing <b>1</b> to <b>{{supportRequests.length}}</b> of {{supportRequests.length}} elements
+  </div>
+</div>

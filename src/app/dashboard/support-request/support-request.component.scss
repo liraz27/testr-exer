@@ -1,0 +1,101 @@
+th {
+    color: #b4bac6;
+    text-align: left;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.td-name {
+     font-weight: bold;
+}
+
+.td-other {
+    color: #8a96a0;
+}
+
+.unsent {
+    width: 47.5px;
+    border-radius: 2px;
+    border: solid 0.5px #0077ff;
+    cursor: pointer;
+    text-align: center;
+    padding: 7px;
+
+    span {
+        width: 16.5px;
+        height: 8.5px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #0077ff;
+    }
+}
+
+.sent{
+    width: 47.5px;
+    padding: 7px;
+    border-radius: 2px;
+    background-color: #0077ff;
+    text-align: center;
+
+    span {
+        width: 14.5px;
+        height: 8.5px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+    }
+    
+}
+
+td{
+    width: 20%;
+    padding: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.support-request {
+
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "title . button"
+    "table table table"
+    "text text text";
+
+    .title {
+        grid-area: title;
+        margin: 5%;
+    }
+
+    .button {
+        letter-spacing: 0.05px;
+        color: #1880e7;
+        cursor: pointer;
+        grid-area: button;
+        margin: 15%;
+    }
+
+    .table {
+        grid-area: table;
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+    .sub-text {
+        grid-area: text;
+        padding-top: 20px;
+        text-align: left;
+        font-size: 12px;
+        background-color: #f3f3f3;
+    }        
+
+    
+}

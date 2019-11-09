@@ -1,0 +1,62 @@
+.general-results-title {
+    height: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #354052;
+  }
+
+.followers-count {
+  font-weight: bold; 
+  font-size: 20px;
+}
+
+.followers-title {
+  font-size: 14px;
+  margin-left:10px;
+  color: #a7a19f;
+}
+
+.graph-img {
+  height:70px;
+}
+
+
+.pie-img {
+  height: 80px;
+}
+
+.general-result {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+  "title pie"
+  "text pie "
+  "graph pie ";
+
+  .title {
+    grid-area: title;
+    text-align: left;
+    padding: 10px;
+    padding-left: 20%;
+  }
+
+  .text-data {
+    grid-area: text;
+    text-align: left;
+    padding: 10px;
+    padding-left: 20%;
+  }
+
+  .graph-data {
+    grid-area: graph;
+    text-align: left;
+    padding: 10px;
+    padding-left: 20%;
+  }
+
+  .pie-data {
+    grid-area: pie;
+    align-self: center;
+    
+  }
+}

@@ -1,0 +1,38 @@
+<div class="dashboard">
+
+  <div class="cubes">
+
+    <div class="dashboard-header">
+      <div class="title">
+        Data overview
+      </div>
+      <div class="progress-bar" style="position: relative;">
+        <div class="gray-line">
+        </div>
+        <div class="blue-line">
+        </div>
+      </div>
+      <div class="insertions-needed">
+        {{insertionsCount}} insertions needed to complete
+      </div>
+    </div>
+
+    <div class="general-results cube">
+      <app-general-results></app-general-results>
+    </div>
+
+    <div class="rating cube">
+      <app-ratings-by-category></app-ratings-by-category>
+    </div>
+
+    <div class="terms cube">
+      <app-terms></app-terms>
+    </div>
+
+    <div class="support-request cube">
+      <app-support-request></app-support-request>
+    </div>
+
+  </div>
+
+</div>
